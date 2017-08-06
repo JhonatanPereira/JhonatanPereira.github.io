@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jhonatan Pereira</title>
+    <meta name="theme-color" content="#04BEFE" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/devicons/1.8.0/css/devicons.min.css" rel="stylesheet">
+    <script src="https://use.fontawesome.com/1943b948a2.js"></script>
+</head>
+<style>
+    html, body {
+        height: 100%;
+        margin: 0;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 300;
+        color: #212121;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 600;
+        margin: .3rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: #2196F3;
+    }
+
+    hr {
+        width: 80%;
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid rgba(255, 255, 255, .2);
+        margin: 1em 0;
+        padding: 0;
+    }
+
+    .central hr {
+        border-top: 1px solid rgba(0, 0, 0, .1);
+    }
+
+    .principal {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        min-height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .esquerdo, .central, .direito {
+        padding: 1.42rem;
+        display: flex;
+        flex: 1 1 300px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        align-content: center;
+        text-align: center;
+        -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+        -moz-animation: fadein 1s; /* Firefox < 16 */
+        -ms-animation: fadein 1s; /* Internet Explorer */
+        -o-animation: fadein 1s; /* Opera < 12.1 */
+        animation: fadein 1s;
+    }
+
+    .esquerdo {
+        background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
+        color: #FAFAFA;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+
+    .central {
+        z-index: 2;
+        background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        -webkit-box-shadow: 0px 0px 16px -4px rgba(0, 0, 0, 0.39);
+        -moz-box-shadow: 0px 0px 16px -4px rgba(0, 0, 0, 0.39);
+        box-shadow: 0px 0px 16px -4px rgba(0, 0, 0, 0.39);
+    }
+
+    .direito {
+        background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
+        color: #FAFAFA;
+    }
+
+    @keyframes fadein {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    /* Firefox < 16 */
+    @-moz-keyframes fadein {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    /* Safari, Chrome and Opera > 12.1 */
+    @-webkit-keyframes fadein {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    /* Internet Explorer */
+    @-ms-keyframes fadein {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    /* Opera < 12.1 */
+    @-o-keyframes fadein {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    .foto {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        -webkit-box-shadow: 0px 0px 16px -4px rgba(0, 0, 0, 0.39);
+        -moz-box-shadow: 0px 0px 16px -4px rgba(0, 0, 0, 0.39);
+        box-shadow: 0px 0px 16px -4px rgba(0, 0, 0, 0.39);
+    }
+
+    .bio {
+        text-align: center;
+    }
+
+    ul {
+        list-style: none;
+        text-align: center;
+        padding: 0;
+    }
+
+    .competencias {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .competencias li {
+        margin: 0 10px 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .competencias span {
+        color: rgba(14, 14, 14, 0.72);
+    }
+
+    .competencias li i {
+        font-size: 3rem;
+        transition: color 0.3s ease;
+    }
+
+    .competencias li i:hover {
+        color: #2196F3;
+    }
+
+    .links {
+        display: inline-flex;
+
+    }
+
+    .links a {
+        margin: 0 10px;
+
+        color: #1565C0;
+        transition: color 0.5s ease;
+    }
+
+    .links a:hover {
+        color: #FAFAFA;
+    }
+
+    .box {
+        padding: .2rem 1rem;
+        margin: .2rem;
+        display: inline-block;
+        background: rgba(255,255,255,.1);
+        color: #FAFAFA;
+        -webkit-box-shadow: 0px 0px 8px -4px rgba(0, 0, 0, 0.39);
+        -moz-box-shadow: 0px 0px 8px -4px rgba(0, 0, 0, 0.39);
+        box-shadow: 0px 0px 8px -4px rgba(0, 0, 0, 0.39);
+    }
+
+    .central .box {
+        color: #212121;
+        background: #2196F3;
+        background: rgba(255,255,255,.1);
+    }
+
+    .box strong {
+        font-weight: 600;
+    }
+
+    .box a {
+        font-weight: 600;
+    }
+
+</style>
+<body>
+<div id="principal" class="principal">
+    <div id="esquerdo" class="esquerdo">
+        <img class="foto" src="foto.jpg">
+        <h1>Jhonatan Pereira</h1>
+        <hr>
+        <div class="bio">
+        	<p>Sou do Rio de Janeiro, e tenho 19 anos.</p>
+            <p>Autodidata desde criança, tenho a ética como base e trabalho com paixão. Sou fissurado por tecnologia e inovação. Valorizo conhecimento e dispenso diplomas. Pretendo mudar o mundo através de pessoas e código.</p>
+            <p>Atuo, principalmente, como Desenvolvedor Web, com foco em PHP, mas estou sempre me atualizando e me envolvendo com novas linguagens e tecnologias ;)</p>
+        </div>
+        <hr>
+        <h2>Atuo como</h2>
+        <ul class="areas">
+            <li>
+                <div class="box">Desenvolvedor Web Full Stack</div>
+            </li>
+            <li>
+                <div class="box">Desenvolvedor Mobile</div>
+            </li>
+            <li>
+                <div class="box">Analista de Sistemas</div>
+            </li>
+            <li>
+                <div class="box">DB Admin</div>
+            </li>
+            <li>
+                <div class="box">Designer Gráfico</div>
+            </li>
+        </ul>
+        <p></p>
+    </div>
+    <div id="central" class="central">
+    	
+        <h2>Competências e ferramentas</h2>
+        <ul class="competencias">
+            <li><i class="devicons devicons-git"></i><span>Git</span></li>
+            <li><i class="devicons devicons-nodejs_small"></i><span>NodeJS</span></li>
+            <li><i class="devicons devicons-php"></i><span>PHP</span></li>
+            <li><i class="devicons devicons-laravel"></i><span>Laravel</span></li>
+            <li><i class="devicons devicons-composer"></i><span>Composer</span></li>
+            <li><i class="devicons devicons-wordpress"></i><span>Wordpress</span></li>
+            <li><i class="devicons devicons-java"></i><span>Java</span></li>
+            <li><i class="devicons devicons-python"></i><span>Python</span></li>
+            <li><i class="devicons devicons-terminal"></i><span>Shell</span></li>
+            <li><i class="devicons devicons-perl"></i><span>Perl</span></li>
+            <li><i class="devicons devicons-html5"></i><span>HTML 5</span></li>
+            <li><i class="devicons devicons-css3"></i><span>CSS 3</span></li>
+            <li><i class="devicons devicons-sass"></i><span>SASS</span></li>
+            <li><i class="devicons devicons-npm"></i><span>NPM</span></li>
+            <li><i class="devicons devicons-grunt"></i><span>Grunt</span></li>
+            <li><i class="devicons devicons-bootstrap"></i><span>Bootstrap</span></li>
+            <li><i class="devicons devicons-materializecss"></i><span>Materialize</span></li>
+            <li><i class="devicons devicons-javascript"></i><span>Javascript</span></li>
+            <li><i class="devicons devicons-jquery"></i><span>jQuery</span></li>
+            <li><i class="devicons devicons-photoshop"></i><span>Photoshop</span></li>
+            <li><i class="devicons devicons-illustrator"></i><span>Illustrator</span></li>
+            <li><i class="devicons devicons-mysql"></i><span>MySQL</span></li>
+            <li><i class="devicons devicons-redis"></i><span>Redis</span></li>
+            <li><i class="devicons devicons-ionic"></i><span>Ionic</span></li>
+            <li><i class="devicons devicons-phonegap"></i><span>Phonegap</span></li>
+            <li><i class="devicons devicons-ubuntu"></i><span>Ubuntu</span></li>
+            <li><i class="devicons devicons-redhat"></i><span>CentOS</span></li>
+            <li><i class="devicons devicons-debian"></i><span>Debian</span></li>
+        </ul>
+        <hr>
+        <h2>Idiomas</h2>
+        <ul class="idiomas">
+            <li>
+                <div class="box">Português - <strong>Nativo</strong></div>
+            </li>
+            <li>
+                <div class="box">Inglês - <strong>Intermediário</strong></div>
+            </li>
+            <li>
+                <div class="box">Francês - <strong>Básico</strong></div>
+            </li>
+        </ul>
+        <hr>
+        <h2>Formação acadêmica</h2>
+        <ul>
+            <li>
+                <div class="box">
+                    Curso superior em <strong>Ciência da Computação</strong> na UFF, <strong>incompleto</strong>.
+                </div>
+            </li>
+        </ul>
+        <hr>
+        <h2>Cursos e certificações</h2>
+        <ul>
+            <li>
+                <div class="box">
+                    Programa de iniciação Científica(Pic Jr.) através da <a href="http://www.obmep.org.br/"
+                        target="_blank">OBMEP </a>, com duração de 1 ano.
+                </div>
+            </li>
+            <li>
+                <div class="box">
+                    Certificação em HTML 5 e PHP pela
+                    <a href="https://www.cursoemvideo.com/" target="_blank"> Cursoemvídeo</a>, ambos com carga horária de 40h.
+                </div>
+            </li>
+            <li>
+                <div class="box">
+                    Certificação em Lógica de Programação pela
+                    <a href="http://www.softblue.com.br/" target="_blank"> Softblue</a>, com carga horária de 20h.
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div id="direito" class="direito">
+        <h2>Experiência</h2>
+        <ul>
+            <li>
+                <div class="box">
+                    <strong>Desenvolvedor Web Full Stack</strong> na
+                    <strong>ZION</strong>, que é uma Escola de Entretenimento inovadora e onde trabalho atualmente.
+                </div>
+            </li>
+            <li>
+                <div class="box">
+                    <strong>CEO</strong> na
+                    <strong>iZath</strong>, que foi uma empresa de hospedagem de sites, administração e gerenciamento de servidores Linux fundada em 2015.
+                </div>
+            </li>
+            <li>
+                <div class="box">
+                    <strong>CEO</strong> e <strong>CTO</strong> no
+                    <strong>MithCraft</strong>, que é um servidor de Minecraft. Por alguns anos eleito como um dos melhores servidores do Brasil, online desde 2014.
+                </div>
+            </li>
+
+        </ul>
+        <hr>
+        <h2>Contato</h2>
+        <p>Quer conversar, precisa de ajuda ou tem algum projeto interessante pra compartilhar? Me envia um e-mail!</p>
+        <div class="box"><i class="fa fa-envelope" aria-hidden="true"></i> contato@jhonatan.me</div>
+        <hr>
+        <h2>Links úteis</h2>
+        <div class="links">
+            <a href="https://www.linkedin.com/in/jhonatanpereira" target="_blank"><i class="fa fa-2x fa-linkedin" aria-hidden="true"></i></a>
+            <a href="https://fb.com/jhonisilva" target="_blank"><i class="fa fa-2x fa-facebook" aria-hidden="true"></i></a>
+            <a href="https://github.com/JhonatanPereira" target="_blank"><i class="fa fa-2x fa-github" aria-hidden="true"></i></a>
+            <a href="https://be.net/jhonatanpereira" target="_blank"><i class="fa fa-2x fa-behance" aria-hidden="true"></i></a>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
