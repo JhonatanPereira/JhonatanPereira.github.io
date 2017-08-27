@@ -1,15 +1,14 @@
 var CACHE_NAME = 'static-v1';
-
 self.addEventListener('install', function (event) {
   event.waitUntil(
     caches.open(CACHE_NAME).then(function (cache) {
       return cache.addAll([
-        '../',
-        '../index.html',
-        '../css/fb-main.css',
-        '../css/fb-reset.css',
-        '../manifest.js',
-        'fb-main.js',
+        '/flappyjess/',
+        '/flappyjess/index.html',
+        '/flappyjess/css/fb-main.css',
+        '/flappyjess/css/fb-reset.css',
+        '/flappyjess/manifest.js',
+        '/flappyjess/js/fb-main.js',
         ]);
     })
     )
