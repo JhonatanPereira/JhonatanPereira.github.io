@@ -1,4 +1,4 @@
-var CACHE_NAME = 'static-v2';
+var CACHE_NAME = 'static-v4';
 self.addEventListener('install', function (event) {
   event.waitUntil(
     caches.open(CACHE_NAME).then(function (cache) {
