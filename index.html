@@ -19,6 +19,7 @@
         font-family: 'Montserrat', sans-serif;
         font-weight: 300;
         color: #212121;
+        background: #2962FF;
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -39,18 +40,23 @@
         color: #2196F3;
     }
 
-    hr {
-        width: 80%;
-        display: block;
-        height: 1px;
-        border: 0;
-        border-top: 1px solid rgba(255, 255, 255, .2);
-        margin: 1em 0;
-        padding: 0;
+    .mt-1 {
+        margin-top: 1rem;
     }
 
-    .central hr {
-        border-top: 1px solid rgba(0, 0, 0, .1);
+    .mt-2 {
+        margin-top: 2rem;
+    }
+
+    .mt-3 {
+        margin-top: 3rem;
+    }
+
+    .mt-4 {
+        margin-top: 4rem;
+    }
+    .cinza {
+        color: #212121;
     }
 
     .principal {
@@ -65,7 +71,7 @@
     .esquerdo, .central, .direito {
         padding: 1.42rem;
         display: flex;
-        flex: 1 1 300px;
+        flex: 1 1 500px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -80,21 +86,16 @@
     }
 
     .esquerdo {
-        background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
         color: #FAFAFA;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     }
 
     .central {
         z-index: 2;
-        background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-        -webkit-box-shadow: 0px 0px 16px -4px rgba(0, 0, 0, 0.39);
-        -moz-box-shadow: 0px 0px 16px -4px rgba(0, 0, 0, 0.39);
-        box-shadow: 0px 0px 16px -4px rgba(0, 0, 0, 0.39);
+        background-image: linear-gradient(135deg, #FAFAFA 0%, #ECEFF1 100%);
+        border-radius: 50px;
     }
 
     .direito {
-        background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
         color: #FAFAFA;
     }
 
@@ -151,9 +152,9 @@
         width: 200px;
         height: 200px;
         border-radius: 50%;
-        -webkit-box-shadow: 0px 0px 16px -4px rgba(0, 0, 0, 0.39);
-        -moz-box-shadow: 0px 0px 16px -4px rgba(0, 0, 0, 0.39);
-        box-shadow: 0px 0px 16px -4px rgba(0, 0, 0, 0.39);
+        -webkit-box-shadow: 0px 0px 5px -4px rgba(0, 0, 0, 0.39);
+        -moz-box-shadow: 0px 0px 5px -4px rgba(0, 0, 0, 0.39);
+        box-shadow: 0px 0px 5px -4px rgba(0, 0, 0, 0.39);
     }
 
     .bio {
@@ -164,6 +165,13 @@
         list-style: none;
         text-align: center;
         padding: 0;
+    }
+
+    ul.areas {
+    }
+
+    ul.areas.li {
+
     }
 
     .competencias {
@@ -192,6 +200,14 @@
         color: #2196F3;
     }
 
+    ul.experiencia {
+
+    }
+
+    ul.experiencia li {
+
+    }
+
     .links {
         display: inline-flex;
 
@@ -200,7 +216,7 @@
     .links a {
         margin: 0 10px;
 
-        color: #1565C0;
+        color: rgba(255,255,255,.4);
         transition: color 0.5s ease;
     }
 
@@ -212,11 +228,13 @@
         padding: .2rem 1rem;
         margin: .2rem;
         display: inline-block;
-        background: rgba(255,255,255,.1);
         color: #FAFAFA;
-        -webkit-box-shadow: 0px 0px 8px -4px rgba(0, 0, 0, 0.39);
-        -moz-box-shadow: 0px 0px 8px -4px rgba(0, 0, 0, 0.39);
-        box-shadow: 0px 0px 8px -4px rgba(0, 0, 0, 0.39);
+        -webkit-box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.1);
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        border-radius: 50px;
     }
 
     .central .box {
@@ -239,14 +257,12 @@
     <div id="esquerdo" class="esquerdo">
         <img class="foto" src="foto.jpg">
         <h1>Jhonatan Pereira</h1>
-        <hr>
         <div class="bio">
         	<p>Sou do Rio de Janeiro, e tenho 19 anos.</p>
             <p>Autodidata desde criança, tenho a ética como base e trabalho com paixão. Sou fissurado por tecnologia e inovação. Valorizo conhecimento e dispenso diplomas. Pretendo mudar o mundo através de pessoas e código.</p>
             <p>Atuo, principalmente, como Desenvolvedor Web, com foco em PHP, mas estou sempre me atualizando e me envolvendo com novas linguagens e tecnologias ;)</p>
         </div>
-        <hr>
-        <h2>Atuo como</h2>
+        <h2 class="mt-4">Atuo como</h2>
         <ul class="areas">
             <li>
                 <div class="box">Desenvolvedor Web Full Stack</div>
@@ -271,7 +287,7 @@
     </div>
     <div id="central" class="central">
     	
-        <h2>Competências e ferramentas</h2>
+        <h2 class="cinza">Competências e ferramentas</h2>
         <ul class="competencias">
             <li><i class="devicons devicons-git"></i><span>Git</span></li>
             <li><i class="devicons devicons-nodejs_small"></i><span>NodeJS</span></li>
@@ -302,7 +318,6 @@
             <li><i class="devicons devicons-redhat"></i><span>CentOS</span></li>
             <li><i class="devicons devicons-debian"></i><span>Debian</span></li>
         </ul>
-        <hr>
         <h2>Idiomas</h2>
         <ul class="idiomas">
             <li>
@@ -315,7 +330,6 @@
                 <div class="box">Francês - <strong>Básico</strong></div>
             </li>
         </ul>
-        <hr>
         <h2>Cursos e certificações</h2>
         <ul>
         	<li>
@@ -353,9 +367,8 @@
                 </div>
             </li>
         </ul>
-        <hr>
-        <h2>Experiência</h2>
-        <ul>
+        <h2 class="mt-3">Experiência</h2>
+        <ul class="experiencia">
             <li>
                 <div class="box">
                     <strong>Desenvolvedor Web Full Stack</strong> na
@@ -376,11 +389,9 @@
             </li>
 
         </ul>
-        <hr>
-        <h2>Contato</h2>
+        <h2  class="mt-3">Contato</h2>
         <p>Quer conversar, precisa de ajuda ou tem algum projeto interessante pra compartilhar? Me envia um e-mail!</p>
         <div class="box"><i class="fa fa-envelope" aria-hidden="true"></i> contato@jhonatan.me</div>
-        <hr>
         <h2>Links úteis</h2>
         <div class="links">
             <a href="https://www.linkedin.com/in/jhonatanpereira" target="_blank"><i class="fa fa-2x fa-linkedin" aria-hidden="true"></i></a>
