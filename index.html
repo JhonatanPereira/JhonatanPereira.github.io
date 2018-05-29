@@ -215,7 +215,6 @@
 
     .links a {
         margin: 0 10px;
-
         color: rgba(255,255,255,.4);
         transition: color 0.5s ease;
     }
@@ -247,8 +246,12 @@
         font-weight: 600;
     }
 
-    .box a {
+    .box a:not(.owtly) {
         font-weight: 600;
+    }
+
+    .owtly {
+        color: #FAFAFA;
     }
 
 </style>
@@ -258,7 +261,7 @@
         <img class="foto" src="foto.jpg">
         <h1>Jhonatan Pereira</h1>
         <div class="bio">
-        	<p>Sou do Rio de Janeiro, e tenho 19 anos.</p>
+        	<p>Sou do Rio de Janeiro, e tenho 20 anos.</p>
             <p>Autodidata desde criança, tenho a ética como base e trabalho com paixão. Sou fissurado por tecnologia e inovação. Valorizo conhecimento e dispenso diplomas. Pretendo mudar o mundo através de pessoas e código.</p>
             <p>Atuo, principalmente, como Desenvolvedor Web, com foco em PHP, mas estou sempre me atualizando e me envolvendo com novas linguagens e tecnologias ;)</p>
         </div>
@@ -344,7 +347,7 @@
                         target="_blank">OBMEP </a>, com duração de 1 ano.
                 </div>
             </li>
-            <li>
+            <!-- <li>
                 <div class="box">
                     Certificação em HTML 5 e PHP pela
                     <a href="https://www.cursoemvideo.com/" target="_blank"> Cursoemvídeo</a>, ambos com carga horária de 40h.
@@ -355,7 +358,7 @@
                     Certificação em Lógica de Programação pela
                     <a href="http://www.softblue.com.br/" target="_blank"> Softblue</a>, com carga horária de 20h.
                 </div>
-            </li>
+            </li> -->
         </ul>
     </div>
     <div id="direito" class="direito">
@@ -373,6 +376,12 @@
                 <div class="box">
                     <strong>Desenvolvedor Web Full Stack</strong> na
                     <strong>ZION</strong>, que é uma Escola de Entretenimento inovadora e onde trabalho atualmente.
+                </div>
+            </li>
+            <li>
+                <div class="box">
+                    <strong>CEO e Fundador</strong> na
+                    <strong><a class="owtly" href="https://owtly.com.br/" target="_blank">Owtly</a></strong>, empresa focada em resolver problemas simples e complexos com foco na qualidade e no cliente.
                 </div>
             </li>
             <li>
