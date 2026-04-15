@@ -2,220 +2,186 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Jhonatan Pereira</title>
-    <meta name="theme-color" content="#212121" />
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500" rel="stylesheet">
-    <script src="https://use.fontawesome.com/1943b948a2.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap-reboot.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap-grid.min.css">
-</head>
-<style>
-    * {
-        font-family: Montserrat, sans-serif;
-    }
+    <meta name="theme-color" content="#f5f1ea">
+    <style>
+        :root {
+            color-scheme: light;
+            --background: #f5f1ea;
+            --surface: rgba(255, 255, 255, 0.72);
+            --border: rgba(31, 28, 24, 0.12);
+            --text: #1f1c18;
+            --muted: #6f675f;
+            --accent: #1f1c18;
+        }
 
-    body {
-        height: 100vh;
-        overflow-y: hidden;
-    }
-    p,h2,h3,h4,h5,h6 {
-        font-family: Poppins, sans-serif;
-    }
-    .row {
-        height: 100%;
-        margin: 0;
-    }
-    p {
-        font-weight: 300;
-    }
-    a.contactme-button {
-        padding: 2px 5px 3px;
-        background-color: #FAFAFA;
-        color: rgb(41, 41, 41);
-    }
-    a.contactme-button:hover {
-        color: rgb(24, 24, 24);
-    }
-    .links a{
-        margin-right: 8px;
-        color: rgba(255,255,255,.6)
-    }
-    a {
-        color: #FAFAFA;
-    }
-    a:hover {
-        color: #FAFAFA;
-    }
-    .col-left {
-        padding: 50px 70px;
-        height: 100%;
-        background: rgb(41, 41, 41);
-        color: #FAFAFA;
-    }
-    
-    .col-right {
-        position: relative;
-        padding: 50px 50px;
-        height: 100%;
-    }
-    .photo {
-        margin-left: -200px;
-        margin-right: 50px;
-        border-radius: 50%;
-        -webkit-box-shadow: 0px 0px 5px -4px rgba(0, 0, 0, 0.39);
-        -moz-box-shadow: 0px 0px 5px -4px rgba(0, 0, 0, 0.39);
-        box-shadow: 0px 0px 5px -4px rgba(0, 0, 0, 0.39);
-    }
-    .jhonatan h1 {
-        font-size: 3rem !important;
-        line-height: .8;
-    }
-    .jhonatan h1 span {
-        color: rgb(41, 41, 41);
-    }
-    .jhonatan h4 {
-        font-weight: 300;
-        margin-top: 15px;
-    }
-    .jhonatan p {
-        margin-top: 30px;
-        max-width: 300px;
-    }
-    .bio-sm {
-        display: none;
-    }
-    @media (min-width: 575.98px) {
-        .row {
-            display: flex;
-            justify-content: center;
+        * {
+            box-sizing: border-box;
         }
-        .col-left {
-            max-width: 500px;
-        }
-        .photo {
-            margin-left: -200px;
-            margin-right: 50px;
-            max-width: 400px;
-            max-height: 400px;
-        }
-    }
-    /* XS */ 
-    @media (max-width: 575.98px) {
+
         body {
-            height: auto;
-            overflow-y: auto;
+            margin: 0;
+            min-height: 100vh;
+            background:
+                radial-gradient(circle at top left, rgba(255, 255, 255, 0.95), transparent 32%),
+                linear-gradient(180deg, #f7f3ec 0%, var(--background) 100%);
+            color: var(--text);
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
-        .row {
-            height: auto;
+
+        a {
+            color: inherit;
+            text-decoration: none;
         }
-        .col-left {
-            text-align: center;
-            padding: 20px 30px;
+
+        .page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 48px 24px;
         }
-        .col-right {
-            display: none !important;
+
+        .card {
+            width: min(100%, 860px);
+            padding: 48px;
+            border: 1px solid var(--border);
+            border-radius: 28px;
+            background: var(--surface);
+            backdrop-filter: blur(18px);
+            box-shadow: 0 24px 80px rgba(31, 28, 24, 0.08);
         }
-        .photo {
-            margin: 0 auto;
-            width: 100%;
-            max-width: 400px;
-            height: auto;
-            border-radius: 0;
+
+        .eyebrow {
+            margin: 0 0 16px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--muted);
         }
-        .jhonatan h1{
-            margin-top: -50px;
+
+        h1 {
+            margin: 0;
+            font-size: clamp(3rem, 7vw, 5.4rem);
+            line-height: 0.94;
+            letter-spacing: -0.06em;
         }
-        .jhonatan h1 span {
-            color: unset;
+
+        .subtitle {
+            margin: 20px 0 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--muted);
         }
-        .jhonatan p {
-            margin: 0 auto;
+
+        .intro {
+            max-width: 640px;
+            margin: 28px 0 0;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text);
         }
-        .bio-sm {
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+            padding-top: 32px;
+            border-top: 1px solid var(--border);
+        }
+
+        .label {
             display: block;
+            margin-bottom: 10px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--muted);
         }
-        .contact {
-            margin-top: 80px;
+
+        .location,
+        .section p {
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--text);
         }
-    }
-    /* SM */
-    @media (min-width: 576px) and (max-width: 767.98px) {
-        .bio-sm {
-            display: block;
-            margin-top: -300px;
+
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 12px;
         }
-        .col-left {
-            padding: 20px 30px 20px 30px;
+
+        .link-pill {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 16px;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.88);
+            transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
         }
-        .col-right .jhonatan {
-            display: none;
+
+        .link-pill:hover,
+        .link-pill:focus-visible {
+            transform: translateY(-1px);
+            border-color: rgba(31, 28, 24, 0.24);
+            background: #ffffff;
         }
-        .bio-sm .photo {
-            display: none;
+
+        @media (max-width: 680px) {
+            .page {
+                padding: 24px 16px;
+            }
+
+            .card {
+                padding: 32px 24px;
+                border-radius: 24px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
         }
-        .photo {
-            margin-left: -270px !important;
-            margin-right: 50px;
-            max-width: 400px;
-            max-height: 400px;
-        }
-        .jhonatan {
-            margin-top: 200px;
-        }
-        .jhonatan h1 span {
-            color: unset;
-        }
-        .jhonatan p {
-            max-width: 200px;
-        }
-        
-    }
-    /* MD */
-    @media (min-width: 768px) and (max-width: 991.98px) {
-        .photo {
-            margin-left: -300px;
-        }
-    }
-</style>
+    </style>
+</head>
 <body>
-    <div class="row">
-        <div class="col-lg-5 col-md-6 col-sm-8 col-left d-flex justify-content-between flex-column">
-            <div class="title">
-                <h1>Hello!</h1>
-                <p>Do you have a challenging problem that no one could solve?<br><a class="contactme-button" href="https://t.me/jhonatanp" target="_blank">Contact-me</a>. I'll be pleased to assist you!</p>
-            </div>
-            <div class="bio-sm">
-                <img class="photo" src="foton.jpg">
-                <div class="jhonatan">
-                    <h1><strong>Jhonatan</strong><br><span>Pereira</span></h1>
-                    <h4><strong>Problem solver and developer</strong></h4>
-                    <p>I'm a Solutions Architect and DevOps Evangelist with a passion for technology and continuous learning. I excel in designing scalable solutions and leading challenging projects while sharing knowledge to promote a culture of innovation and collaboration.</p>
+    <main class="page">
+        <section class="card">
+            <p class="eyebrow">About</p>
+            <h1>Jhonatan<br>Pereira</h1>
+            <p class="subtitle">Problem solver and developer</p>
+            <p class="intro">
+                Solutions Architect and DevOps Evangelist focused on scalable solutions, continuous learning, and challenging projects.
+                I enjoy turning complexity into clear paths forward and helping teams build with more confidence and innovation.
+            </p>
+
+            <div class="grid">
+                <div class="section">
+                    <span class="label">Location</span>
+                    <p class="location">Based in Brazil</p>
+                </div>
+
+                <div class="section">
+                    <span class="label">Contact</span>
+                    <p>Do you have a challenging problem? Let's talk.</p>
+                    <div class="links">
+                        <a class="link-pill" href="mailto:pereira@jhonatan.me">Email</a>
+                        <a class="link-pill" href="https://www.linkedin.com/in/jhonatanpereira" target="_blank" rel="noreferrer">LinkedIn</a>
+                        <a class="link-pill" href="https://t.me/jhonatanp" target="_blank" rel="noreferrer">Telegram</a>
+                    </div>
                 </div>
             </div>
-            <div class="contact">
-                <p>I'm based in Brazil</p>
-                <h4>Let's work together!</h4>
-                <p class="links"> 
-                    <a href="https://www.linkedin.com/in/jhonatanpereira" target="_blank"><i class="fa fa-2x fa-linkedin" aria-hidden="true"></i></a>
-                    <a href="https://t.me/jhonatanp" target="_blank"><i class="fa fa-2x fa-telegram" aria-hidden="true"></i></a>
-                </p>
-                    <p class="email"><a href="mailto:pereira@jhonatan.me">pereira@jhonatan.me</a>
-                </p>
-            </div>
-            
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-4 col-right d-flex align-items-center">
-            <img class="photo" src="foton.jpg">
-            <div class="jhonatan">
-                <h1><strong>Jhonatan</strong><br> <span>Pereira</span></h1>
-                <h4><strong>Problem solver and developer</strong></h4>
-                <p>I'm a Solutions Architect and DevOps Evangelist with a passion for technology and continuous learning. I excel in designing scalable solutions and leading challenging projects while sharing knowledge to promote a culture of innovation and collaboration.</p>
-            </div>
-            
-        </div>
-    </div>
+        </section>
+    </main>
 </body>
 </html>
